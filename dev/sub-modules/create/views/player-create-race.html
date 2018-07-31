@@ -1,0 +1,22 @@
+<div class="row">
+	<div class="col">
+		<h3>Race</h3>
+
+		<div ng-repeat="race in vm.races">
+			<input type="radio"
+			       id="{{race}}"
+			       ng-change="vm.setRace()"
+			       ng-model="vm.selectedRace"
+			       name="race"
+			       ng-value="race"/>
+			<label for="{{race}}" ng-bind="race"></label>
+		</div>
+
+		<div>
+			<a ui-sref="create.profession">Class -></a>
+		</div>
+	</div>
+	<div class="col">
+		{{vm.racesExt[vm.selectedRace].desc}}
+	</div>
+</div>
